@@ -1,0 +1,11 @@
+{
+  "AppSyncApiName": "imagetracker",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthCognitoUserPoolId": {
+    "Fn::GetAtt": [
+      "authimagetracker11bb0fb1",
+      "Outputs.UserPoolId"
+    ]
+  }
+}
