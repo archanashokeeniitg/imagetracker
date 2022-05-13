@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-imagetracker-dev-20408-authRole",
+      "UnauthRoleArn": "arn:aws:iam::484625484547:role/amplify-imagetracker-dev-20408-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::484625484547:role/amplify-imagetracker-dev-20408-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-imagetracker-dev-20408-deployment",
+      "UnauthRoleName": "amplify-imagetracker-dev-20408-unauthRole",
+      "StackName": "amplify-imagetracker-dev-20408",
+      "StackId": "arn:aws:cloudformation:us-east-2:484625484547:stack/amplify-imagetracker-dev-20408/a78c5b00-d29b-11ec-b77e-0a865c138590",
+      "AmplifyAppId": "df6s286sea67w"
+    },
+    "categories": {
+      "auth": {
+        "imagetracker11bb0fb1": {}
+      }
+    }
+  }
+}

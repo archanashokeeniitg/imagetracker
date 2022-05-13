@@ -1,0 +1,10 @@
+{
+  "auth": {
+    "imagetracker11bb0fb1": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false
+    }
+  }
+}
