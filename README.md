@@ -1,70 +1,229 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+CMPE-282 Sec 48 - Cloud Services
+Archana Shokeen (015237378)
+Project Report
+San Jose State University
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+
+
+CMPE-282 Sec 48 - Cloud Services
+SMART GALLERY
+
+Links:
+Github
+https://github.com/archanashokeeniitg/imagetracker
+
+
+PPT
+https://docs.google.com/presentation/d/1sNMXM6ThMpIqXe-DcAv8ykeAV7njcD_qcPGj3nbpoFM/edit?usp=sharing
+
+
+Report
+https://docs.google.com/document/d/1qQUmr-1m72o6mxhKGXXDNE7J2az-I-VK97VFzXYX-2c/edit?usp=sharing
+
+
+Plan
+https://docs.google.com/document/d/1dQMrFlSXEB6H98-bt5GtysX663gNY0GiWR_TUHRPKBo/edit?usp=sharing
+
+
+
+
+	
+
+
+Architecture Diagram
+
+
+Introduction
+
+Smart Image is an image gallery that stores your pictures in a cloud based application. With an AWS backend for storage in the cloud, your images can be instantaneously retrieved without any worries of image loss.  It provides features like disaster resistance, robustness, fully scalable application.
+
+
+
+
+Technologies & Functionalities
+
+Smart Image uses multiple new technologies to ensure that the users have better control and access to their images. From the architectural diagram above, the application is written in React and hosted on AWS Amplify using graphql. The schema has templates for the image object and its information which are stored in both AWS S3 bucket and DynamoDB respectively.
+
+Authentication is essential and a core area of our application development. AWS Cognito provides authentication using username and password, in addition to email and SMS notifications for registration so that only authorized users can access their application. Images uploaded to the bucket are segregated by username using IAM users.Services like download and delete is provided in the application so that images can also be downloaded locally or deleted from the S3 bucket.
+
+Smart Labeling using Amazon Rekognition is implemented as the functionality of the project. Since we aim to build a platform like Google Photos for image storage, the labels will be used to search and sort the images. The labels will be linked to the react app using graphql and will be stored in the DynamoDB database. Thus, when a user uploads an image, they can also add labels which can be used to identify similar images in the gallery, which are improved in retrieval performance using  Cloudfront CDN, built into Amplify and Route53.
+
+Finally, the application is hosted on Amplify which is complemented by Route53 for custom domain, so that anyone with the URL can access the application.
+
+During the development process, code was hosted on GitHub for CI/CD purposes with regular commits. In the beginning, we cloned from a central repository branch and developed our components, and then merged them back into a central repository branch which we hosted on AWS Amplify.
+
+Feature List
+AWS Amplify Hosting
+DynamoDB Tables
+Appsync API with GraphQL
+AWS Rekognition
+Smart Labeling
+Amplify Authentication with Cognito
+Cloudfront CDN 
+Autoscaling
+Multi-AZ Redundancy
+S3 Lifecycle Policy
+
+Public URL
+The application can be reached at the following link: https://dev.df6s286sea67w.amplifyapp.com/
+
+
+
+Testing Credentials
+SignUp and log in as a user:
+username -test1
+password - test@123
+
+Sample Demo Screenshots
+Landing page/Login page
+
+
+Sign up page
+
+
+Verification page
+
+
+Home page
+
+
+Upload page
+
+
+
+
+
+
+
+
+
+Download (right-bottom button) or Delete (left-bottom button)  image with button
+
+
+Delete Functionality
+
+
+Download Functionality
+
+Click on the download button and you can download the image .
+
+
+
+AWS configuration screenshots
+
+Hosting on AWS Amplify
+
+
+
+
+
+Monitoring 
+CloudWatch And SNS to monitor unhealthy state
+
+    
+DR Measures (MultiAZ)
+Cross Region Replication for S3 Bucket
+
+
+
+S3 TA / Versioning / Events
+
+
+AutoScaling
+
+
+
+
+
+
+CI/CD with GitHub Integration
+
+
+Domain management with AWS Amplify and R53 includes built-in CloudFront for CDN
+
+
+
+
+S3 buckets to store backend configurations and users’ images
+
+
+
+AWS Cognito to handle user authorization
+
+
+
+
+
+AWS DynamoDB to store users’ data
+
+
+AWS CloudFormation to manage stack of resources and policies
+
+
+Lambda functions generated by Amplify
+
+
+AppSync queries generated by Amplify with GraphQL
+
+
+
+References
+
+A. (2022). GitHub - archanashokeeniitg/imagetracker. GitHub. https://github.com/archanashokeeniitg/imagetracker
+
+Getting started - AWS Amplify Docs. (2022). Aws.Com. https://docs.amplify.aws/start/?sc_icampaign=start&sc_ichannel=docs-home/q/integration/react
+
+
+A. (2020). GitHub - archanashokeeniitg/image-library-appsync. GitHub. https://github.com/archanashokeeniitg/image-library-appsync
+
+
+
+
+https://docs.amplify.aws/start/?sc_icampaign=start&sc_ichannel=docs-home/q/integration/react
+
+https://docs.amplify.aws/start/getting-started/installation/q/integration/react/
+
+https://github.com/dabit3/amplify-photo-sharing-workshop
+
+https://docs.google.com/document/d/1_whh2ciUOJvpXwsEgLciUSCwYyCuaGnzxklP2aKL9bQ/edit#heading=h.wr3g01v25
+Rdz
+
+https://i.guim.co.uk/img/media/684c9d087dab923db1ce4057903f03293b07deac/205_132_1915_1150/master/1915.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=14a95b5026c1567b823629ba35c40aa0
+
+https://images.unsplash.com/photo-1606983340126-99ab4feaa64a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmlydGhkYXklMjBjYWtlc3xlbnwwfHwwfHw%3D&w=1000&q=80
+
+
